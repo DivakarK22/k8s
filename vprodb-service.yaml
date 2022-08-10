@@ -15,5 +15,4 @@ spec:
     targetPort: 3306
   selector:
     io.kompose.service: vprodb
-status:
-  loadBalancer: {}
+  type: LoadBalancer

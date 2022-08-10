@@ -15,5 +15,4 @@ spec:
     targetPort: 11211
   selector:
     io.kompose.service: vprocache01
-status:
-  loadBalancer: {}
+  type: LoadBalancer

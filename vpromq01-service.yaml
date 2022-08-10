@@ -15,5 +15,4 @@ spec:
     targetPort: 15672
   selector:
     io.kompose.service: vpromq01
-status:
-  loadBalancer: {}
+  type: LoadBalancer
