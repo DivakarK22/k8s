@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -6,12 +6,15 @@ metadata:
     kompose.version: 1.7.0 (HEAD)
   creationTimestamp: null
   labels:
-    io.kompose.service: vproapp
+    io.kompose.service: vproweb
   name: vproapp
 spec:
   replicas: 1
   strategy:
     type: Recreate
+  selector:
+    matchLabels:
+      io.kompose.service: vproapp
   template:
     metadata:
       creationTimestamp: null
