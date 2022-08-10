@@ -6,7 +6,7 @@ metadata:
     kompose.version: 1.7.0 (HEAD)
   creationTimestamp: null
   labels:
-    io.kompose.service: vproweb
+    io.kompose.service: vproapp
   name: vproapp
 spec:
   replicas: 1
