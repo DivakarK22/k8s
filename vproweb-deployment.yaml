@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.7.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: vproweb
+  name: vproweb
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: vproweb
+    spec:
+      containers:
+      - image: divakar2201/webv2
+        name: vproweb
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
+status: {}
